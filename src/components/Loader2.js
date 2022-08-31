@@ -1,6 +1,6 @@
 import React from "react";
 
-import {View, Image} from 'react-native';
+import {View, Image, Text} from 'react-native';
 
 import styles from "../styles/styles";
 
@@ -13,9 +13,24 @@ export default () => {
             style={styles.globalContainer}>
 
                 <View
-                style={styles.boxImgLoader}>
-                    <Image
-                    source={require('../assets/logo.png')}/>
+                style={styles.containerLoader}>
+
+                    <View
+                    style={styles.boxImgLoader}>
+                        <Image
+                        style={{width: 150, height: 450}}
+                        source={require('../assets/logoRotate.png')}/>
+                    </View>
+
+                    <View
+                    style={styles.containerTextLoader}>
+                        <Text
+                        style={styles.logoText}>
+                            Green
+                            Bank 
+                        </Text>
+                    </View>
+
                 </View>
               
             </View>

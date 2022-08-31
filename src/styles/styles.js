@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
 
@@ -8,6 +8,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
     },
 
+    containerLoader: {
+        justifyContent:'center',
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 20
+    },
+
     imgLoader: {
         width: 400,
         height: 500, 
@@ -15,7 +22,23 @@ const styles = StyleSheet.create({
 
     boxImgLoader: {
         alignItems: 'center',
-        padding: 10
+        width: 200,
+      
+    },
+
+    logoText: {
+        fontSize: 35,
+        fontWeight: '400',
+        letterSpacing: 1,
+        color: 'white',
+        position: 'relative',
+        right: 20
+    },
+
+    containerTextLoader: {
+
+        width: 150
+
     }
 
     
