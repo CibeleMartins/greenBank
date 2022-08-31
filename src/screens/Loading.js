@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { Text } from 'react-native';
+import Loader from '../components/Loader';
+
+import Button from '../components/Button';
+import Loader2 from '../components/Loader2';
 
 export default function Loading () {
 
@@ -8,7 +11,9 @@ export default function Loading () {
     return (
 
         <>
-            <Text>AQUI VAI SER O CARREGAMENTO</Text>
+            {/* <Loader/> */}
+
+            <Loader2/>
         </>
     )
 }

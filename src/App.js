@@ -1,9 +1,7 @@
-import React from 'react'
-// import {Text} from 'react-native'
+import React from 'react';
 import { NativeBaseProvider} from "native-base";
-// import Home from './screens/Home';
 
-import { Routes } from './routes'
+import { Routes } from './routes';
 
 export default function App () {
 
@@ -11,7 +9,9 @@ export default function App () {
 
     
     <NativeBaseProvider>
-      <Routes></Routes>
+      
+         <Routes/>
+   
     </NativeBaseProvider>
     
   )

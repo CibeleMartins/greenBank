@@ -12,13 +12,12 @@ export function StackRoutes() {
     return (
 
         <Navigator>
-
             <Screen 
-            name="Home"
+            name="Loading"
             component={Loading}/>
 
             <Screen 
-            name="Loading"
+            name="Home"
             component={Home}/>
         </Navigator>
     )
