@@ -2,6 +2,8 @@ import React from "react";
 
 import {View, Image, Text} from 'react-native';
 
+import { MotiView } from "moti";
+
 import styles from "../styles/styles";
 
 
@@ -15,12 +17,24 @@ export default () => {
                 <View
                 style={styles.containerLoader}>
 
-                    <View
+                    <MotiView
+                    from={{
+                        opacity:0
+                    }}
+
+                    animate={{
+                        opacity: 1
+                    }}
+
+                    transition={{
+                        type: 'timing',
+                        duration: 3000
+                    }}
                     style={styles.boxImgLoader}>
                         <Image
                         style={{width: 150, height: 450}}
                         source={require('../assets/logoRotate.png')}/>
-                    </View>
+                    </MotiView>
 
                     <View
                     style={styles.containerTextLoader}>
