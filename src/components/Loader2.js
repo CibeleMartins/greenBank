@@ -1,8 +1,8 @@
 import React from "react";
 
-import {View, Image, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 
-import { MotiView } from "moti";
+import { MotiView, MotiText, MotiImage } from "moti";
 
 import styles from "../styles/styles";
 
@@ -19,7 +19,7 @@ export default () => {
 
                     <MotiView
                     from={{
-                        opacity:0
+                        opacity:0,
                     }}
 
                     animate={{
@@ -31,21 +31,79 @@ export default () => {
                         duration: 3000
                     }}
                     style={styles.boxImgLoader}>
-                        <Image
+                        <MotiImage
+                        from={{
+                            rotate: '0deg'
+                        }}
+
+                        animate={{
+                            rotate: '-90deg'
+                        }}
+                        transition={{
+                            type: 'timing',
+                            duration: 4000
+                        }}
                         style={{width: 150, height: 450}}
                         source={require('../assets/logoRotate.png')}/>
                     </MotiView>
 
-                    <View
+                    <MotiView
+                    from={{
+                        width: 150
+                    }}
+
+                    animate={{
+                        width: 0
+                    }}
+
+                    transition={{
+                        type: 'timing',
+                        duration: 3000
+                    }}
                     style={styles.containerTextLoader}>
-                        <Text
+                        <MotiText
+                        from={{
+                            opacity: 1
+                        }}
+
+                        animate={{
+                           opacity: 0
+                        }}
+
+                        transition={{
+                            type: 'timing',
+                            duration: 1500
+                        }}
                         style={styles.logoText}>
                             Green
                             Bank 
-                        </Text>
-                    </View>
+                        </MotiText>
+                    </MotiView>
 
                 </View>
+
+                             
+                <MotiView
+                style={styles.motiViewTouchable}
+                   from={{
+                    opacity: 0
+                   }}
+                   animate={{
+                    opacity: 1
+                   }}
+                   transition={{
+                    type:'timing',
+                    duration: 9800
+                   }}>
+                    <TouchableOpacity
+                        style={styles.touchable}>
+                        <Text 
+                        style={styles.touchableText}>
+                            For You
+                        </Text>
+                    </TouchableOpacity>
+                   </MotiView>
+
               
             </View>
         </>

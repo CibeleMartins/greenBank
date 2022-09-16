@@ -1,26 +1,23 @@
 import React from 'react';
 
 import { Button } from 'native-base';
-import Loader from './Loader';
 
 export default ()=> {
 
+   return (
 
 
-return (
+            <>
+
+            
+
+               <Button
+               title='button'/>
 
 
-         <>
+            </>
 
-            <Loader/>
-
-            <Button
-            title='button'/>
-
-
-         </>
-
-)
+   )
 
 
 
